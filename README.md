@@ -66,6 +66,11 @@ For example, these actions should not be allowed:
 - Entering learning objectives for a course not offered by the School of Data Science
 - Assigning an invalid instructor to a course
 
+Yes,
+- Instructors should have a valid `email_address` and `phone_number`
+- Learning objectives should pertain to courses offered by the School of Data Science
+- TBD
+
 ### 8) (5 PTS) Draw and submit a Relational Model for your project. For an example, see Beginning Database Design Solutions page 115 Figure 5-28.
 
 https://dbdiagram.io/d/ds5111_lab_database_design-65419ad07d8bbd64653c6747
