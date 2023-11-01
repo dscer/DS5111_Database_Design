@@ -54,6 +54,13 @@ You will then answer the following Design Questions and submit your responses.
 
 ### 6) (1 PT) Are there indexes that you should build? Explain your reasoning.
 
+Yes,
+- Primary Keys: Indexed primary keys allow for efficient data retrieval and data integrity enforcement.
+- Foreign Keys: Index foreign keys facilitate joins between tables.
+- Attributes used in WHERE Clauses: It's beneficial to index those attributes to speed up data retrieval for WHERE conditions. To be determined if this can apply to this use case.
+- Attributes Used in JOIN Operations: Indexing the attributes involved in the join conditions can enhance the performance of these operations for tables that are frequently joined with other tables. To be determined if this can apply to this use case.
+- Attributes with High Cardinality: Attributes with many distinct values can be indexed for efficiency. To be determined if this can apply to this use case.
+
 ### 7) (2 PTS) Are there constraints to enforce? Explain your answer and strategy.
 For example, these actions should not be allowed:
 - Entering learning objectives for a course not offered by the School of Data Science
