@@ -6,12 +6,17 @@ You will then answer the following Design Questions and submit your responses.
 
 ### 1) (3 PTS) What tables should you build?
 
-- Table 1: courses
-- Table 2: instructors
-- Table 3: learning_outcomes
-- Table 4: teaches
+- Table 1: courses - This table stores all course information which has a relation to learning outcomes and what is being taught and by whom.
+- Table 2: instructors - This table stores all instructor information which has a relation to what is being taught.
+- Table 3: learning_outcomes - This table stores all learning outcomes which have a relation to courses.
+- Table 4: teaches - This table stores what is being taught, by whom, and when.
 
 ### 2) (2 PTS) For each table, what field(s) will you use for primary key? 
+
+- Table 1: courses - The mnemonic of the course.
+- Table 2: instructors - An unqiue instructor id since names can potentially be the same.
+- Table 3: learning_outcomes - A unique objective id.
+- Table 4: A combination of the instructor id, course mnemonic, and term
 
 ### 3) (2 PTS) For each table, what foreign keys will you use?
 
