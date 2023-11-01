@@ -35,6 +35,13 @@ You will then answer the following Design Questions and submit your responses.
 
 ### 5) (1 PT) Is there anything to normalize in the database, and if so, how will you normalize it? Recall the desire to eliminate redundancy.
 
+- **1st order normalization:**
+-   In the "Instructor" and "Course" tables, each column contains atomic values, such as _instructor_id, first_name, last_name, _mnemonic, course_name, etc.
+-   All entries in each column are of the same data type, such as integers for IDs, strings for names, and so on.
+
+- 2nd order normalization:
+- 3rd order normalization: 
+
 ### 6) (1 PT) Are there indexes that you should build? Explain your reasoning.
 
 ### 7) (2 PTS) Are there constraints to enforce? Explain your answer and strategy.
