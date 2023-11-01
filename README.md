@@ -4,8 +4,6 @@
 Part 1 of the assignment is to understand the problem and design the database.
 You will then answer the following Design Questions and submit your responses.
 
-Design Questions
-
 ### 1) (3 PTS) What tables should you build?
 
 ### 2) (2 PTS) For each table, what field(s) will you use for primary key? 
