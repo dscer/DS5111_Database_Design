@@ -6,6 +6,10 @@ You will then answer the following Design Questions and submit your responses.
 
 ### 1) (3 PTS) What tables should you build?
 
+Table 1: courses
+Table 2: instructors
+Table 3: learning-outcomes
+
 ### 2) (2 PTS) For each table, what field(s) will you use for primary key? 
 
 ### 3) (2 PTS) For each table, what foreign keys will you use?
@@ -28,5 +32,7 @@ For example, these actions should not be allowed:
 - Assigning an invalid instructor to a course
 
 ### 8) (5 PTS) Draw and submit a Relational Model for your project. For an example, see Beginning Database Design Solutions page 115 Figure 5-28.
+
+https://dbdiagram.io/d/ds5111_lab_database_design-65419ad07d8bbd64653c6747
 
 ### 9) (2 PTS) Suppose you were asked if your database could also support the UVA SDS Residential MSDS Program. Explain any issues that might arise, changes to the database structure (schema), and new data that might be needed. Note you won’t actually need to support this use case for the project.
