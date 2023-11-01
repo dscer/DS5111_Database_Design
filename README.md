@@ -81,3 +81,30 @@ https://dbdiagram.io/d/ds5111_lab_database_design-65419ad07d8bbd64653c6747
 ### 9) (2 PTS) Suppose you were asked if your database could also support the UVA SDS Residential MSDS Program. Explain any issues that might arise, changes to the database structure (schema), and new data that might be needed. Note you won’t actually need to support this use case for the project.
 
 No, we would need to consider room assignment and availability which makes the database more complex since we would need to track class enrollment which in turn could require a need to have a student table and track many other factor that make availability possible. Room assignment would mean we need to determine what classes are taking place at what time of the day and where so we do not have a collison.
+
+## Part 2
+
+After building and populating your database, you will write SQL queries to answer the questions below.
+Include your SQL code and results in your submitted file.
+
+### 1) (1 PT) Which courses are currently included (active) in the program? Include the course mnemonic and course name for each.
+
+### 2) (1 PT) Which courses were included in the program, but are no longer active? Include the course mnemonic and course name for each.
+
+### 3) (1 PT) Which instructors are not current employees?
+
+### 4) (1 PT) For each course (active and inactive), how many learning outcomes are there?
+
+### 5) (2 PTS) Are there any courses with no learning outcomes? If so, provide their mnemonics and names.
+
+### 6) (2 PTS) Which courses include SQL as a learning outcome? Include the learning outcome descriptions, course mnemonics, and course names in your solution.
+
+### 7) (1 PT) Who taught course ds5100 in Summer 2021?
+
+### 8) (1 PT) Which instructors taught in Fall 2021? Order their names alphabetically, making sure the names are unique.
+
+### 9) (1 PT) How many courses did each instructor teach in each term? Order your results by term and then instructor.
+
+### 10a) (2 PTS) Which courses had more than one instructor for the same term? Provide the mnemonic and term for each. Note this occurs in courses with multiple sections.
+
+### 10b) (1 PT) For courses with multiple sections, provide the term, course mnemonic, and instructor name for each. Hint: You can use your result from 10a in a subquery or WITH clause.
