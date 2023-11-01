@@ -36,11 +36,21 @@ You will then answer the following Design Questions and submit your responses.
 ### 5) (1 PT) Is there anything to normalize in the database, and if so, how will you normalize it? Recall the desire to eliminate redundancy.
 
 - **1st order normalization:**
--   In the "Instructor" and "Course" tables, each column contains atomic values, such as _instructor_id, first_name, last_name, _mnemonic, course_name, etc.
--   All entries in each column are of the same data type, such as integers for IDs, strings for names, and so on.
+  - In the `instructors` and `courses` tables, each column contains atomic values, such as `_instructor_id`, `first_name`, `last_name`, `_mnemonic`, `course_name`, etc.
+  - The `teaches` table appears satisfies 1NF. Each column contains atomic values of consistent data types.
+  - The `learning_outcomes` table satisfies 1NF. Each column contains atomic values of consistent data types.
+  - All entries in each column are of the same data type, such as integers for IDs, strings for names, and so on.
 
 - 2nd order normalization:
-- 3rd order normalization: 
+  - The `instructor` table has `_instructor_id` as its primary key, and all non-key attributes (`first_name`, `last_name`, `email_address`, `phone_number`, `active`) are functionally dependent on the `_instructor_id`, making it satisfy 2NF.
+  - The `course` table has `_mnemonic` as its primary key, and all non-key attributes (`course_name`, `description_short`, `creedit_hours`, `active`) are functionally dependent on the `_mnemonic`, making it satisfy 2NF.
+  - The `teaches` table has a composite primary key (`_instructor_id`, `_mnemonic`, and `_term`) and no non-key attributethat are functionally dependent on the entire primary key. Thus, it satisfies 2NF.
+  - The `learning_outcomes` table has a composite primary key (`_objective_id` and `_mnemonic`), as well as non-key attributes, including `short_description` and `active`. These non-key attributes are functionally dependent on the entire primary key, so it satisfies 2NF.
+
+- 3rd order normalization:
+  - The `instructors` and `courses` tables satisfy 3NF because they do not exhibit transitive dependencies. All non-key attributes are directly dependent on the primary key.
+  - The `teaches` table appears to be in 3NF because there don't seem to be any transitive dependencies. All non-key attributes are directly dependent on the primary key (`_instructor_id` and `_mnemonic`).
+  - The `learning_outcomes` table seems to be in 3NF. There does not appear to be transitive dependencies, and all non-key attributes are directly dependent on the primary key (`_objective_id` and `_mnemonic`).
 
 ### 6) (1 PT) Are there indexes that you should build? Explain your reasoning.
 
