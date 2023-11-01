@@ -75,4 +75,9 @@ Yes,
 
 https://dbdiagram.io/d/ds5111_lab_database_design-65419ad07d8bbd64653c6747
 
+![](ds5111_lab_database_design-1.png)
+![](ds5111_lab_database_design-2.png)
+
 ### 9) (2 PTS) Suppose you were asked if your database could also support the UVA SDS Residential MSDS Program. Explain any issues that might arise, changes to the database structure (schema), and new data that might be needed. Note you won’t actually need to support this use case for the project.
+
+No, we would need to consider room assignment and availability which makes the database more complex since we would need to track class enrollment which in turn could require a need to have a student table and track many other factor that make availability possible. Room assignment would mean we need to determine what classes are taking place at what time of the day and where so we do not have a collison.
