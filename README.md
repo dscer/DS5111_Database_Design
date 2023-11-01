@@ -27,11 +27,11 @@ You will then answer the following Design Questions and submit your responses.
 
 ### 4) (2 PTS) Learning outcomes, courses, and instructors need a flag to indicate if they are currently active or not. How will your database support this feature? In particular:
 
-- If a course will be taught again, it will be flagged as active. If the course won’t be taught again, it will be flagged as inactive.
+- If a course will be taught again, it will be flagged as active. If the course won’t be taught again, it will be flagged as inactive. **Adding a flag called `active` to the `courses` table.**
 
-- It is important to track if an instructor is a current employee or not.
+- It is important to track if an instructor is a current employee or not. **Adding a flag called `active` to the `instructor` table.**
 
-- Learning outcomes for a course can change. You’ll want to track if a learning outcome is currently active or not.
+- Learning outcomes for a course can change. You’ll want to track if a learning outcome is currently active or not. **Adding a flag called `active` to the `learning_outcome` table.**
 
 ### 5) (1 PT) Is there anything to normalize in the database, and if so, how will you normalize it? Recall the desire to eliminate redundancy.
 
