@@ -6,19 +6,24 @@ You will then answer the following Design Questions and submit your responses.
 
 ### 1) (3 PTS) What tables should you build?
 
-- Table 1: courses - This table stores all course information which has a relation to learning outcomes and what is being taught and by whom.
-- Table 2: instructors - This table stores all instructor information which has a relation to what is being taught.
-- Table 3: learning_outcomes - This table stores all learning outcomes which have a relation to courses.
-- Table 4: teaches - This table stores what is being taught, by whom, and when.
+- Table 1: `courses` - This table stores all course information which has a relation to learning outcomes and what is being taught and by whom.
+- Table 2: `instructors` - This table stores all instructor information which has a relation to what is being taught.
+- Table 3: `learning_outcomes` - This table stores all learning outcomes which have a relation to courses.
+- Table 4: `teaches` - This table stores what is being taught, by whom, and when.
 
 ### 2) (2 PTS) For each table, what field(s) will you use for primary key? 
 
-- Table 1: courses - The mnemonic of the course.
-- Table 2: instructors - An unqiue instructor id since names can potentially be the same.
-- Table 3: learning_outcomes - A unique objective id.
-- Table 4: A combination of the instructor id, course mnemonic, and term
+- Table 1: `course`s - The `_mnemonic` of the course.
+- Table 2: `instructors` - An unqiue `_instructor_id` since names can potentially be the same.
+- Table 3: `learning_outcomes` - A unique `_objective_id`.
+- Table 4: `teaches` - A combination of the `instructor_id`, course `_mnemonic`, and `_term`.
 
 ### 3) (2 PTS) For each table, what foreign keys will you use?
+
+- Table 1: `courses` - The `_mnemonic` of the course will be used as a foreign key in the `teaches` table.
+- Table 2: `instructors` - The `_instructor_id` of the instructor will be used as a foreign key in the `teaches` table.
+- Table 3: `learning_outcomes` - The `mnemonic` is a foreign key to the `courses` table
+- Table 4: `teaches` - The `_instructor_id` of the instructor and `_mnemonic` of the course are both foreign keys.
 
 ### 4) (2 PTS) Learning outcomes, courses, and instructors need a flag to indicate if they are currently active or not. How will your database support this feature? In particular:
 
