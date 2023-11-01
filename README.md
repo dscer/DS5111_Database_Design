@@ -6,9 +6,10 @@ You will then answer the following Design Questions and submit your responses.
 
 ### 1) (3 PTS) What tables should you build?
 
-Table 1: courses
-Table 2: instructors
-Table 3: learning-outcomes
+- Table 1: courses
+- Table 2: instructors
+- Table 3: learning_outcomes
+- Table 4: teaches
 
 ### 2) (2 PTS) For each table, what field(s) will you use for primary key? 
 
