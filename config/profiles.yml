@@ -1,0 +1,13 @@
+<your project name>:
+  outputs:
+    dev:
+      account: rja95216
+      database: DS5111_DB
+      password: <password> 
+      role: DS5111_DBT
+      schema: LAB01_<uva uuid>
+      threads: 1
+      type: snowflake
+      user: <uva uuid>@virginia.edu
+      warehouse: COMPUTE_WH
+  target: dev
