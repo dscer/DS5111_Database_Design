@@ -14,7 +14,7 @@ init:
 
 .PHONY: seed
 seed:
-	cp sample_seed/NASA_Facilities.csv ds5111_lab_dbt_snow/seeds/
+	cp sample_seed/ ds5111_db_design_dbt_snow/seeds/ -r
 	. env/bin/activate; cd ds5111_db_design_dbt_snow; \
 		dbt seed
 
@@ -25,7 +25,7 @@ run:
 
 .PHONY: run_new
 run_new:
-	cp -r sample_model/nasa ds5111_lab_dbt_snow/models/
+	cp -r sample_model/ ds5111_lab_dbt_snow/models/
 	. env/bin/activate; cd ds5111_db_design_dbt_snow; \
 		dbt run 
 
