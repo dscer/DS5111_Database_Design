@@ -160,3 +160,4 @@ cython_debug/
 #.idea/
 
 ds5111_db_design_dbt_snow/
+**/*.db
