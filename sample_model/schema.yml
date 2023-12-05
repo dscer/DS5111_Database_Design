@@ -11,24 +11,24 @@ models:
           - not_null
           - accepted_values:
               values: ['True']
-  # - name: question_2
-  #   description: "2) (1 PT) Which courses were included in the program, but are no longer active? Include the course mnemonic and course name for each."
-  #   columns:
-  #     - name: status
-  #       description: ""
-  #       tests:
-  #         - not_null
-  #         - accepted_values:
-  #             values: ['Active']
-  # - name: question_3
-  #   description: "3) (1 PT) Which instructors are not current employees?"
-  #   columns:
-  #     - name: status
-  #       description: ""
-  #       tests:
-  #         - not_null
-  #         - accepted_values:
-  #             values: ['Active']
+  - name: question_2
+    description: "2) (1 PT) Which courses were included in the program, but are no longer active? Include the course mnemonic and course name for each."
+    columns:
+      - name: status
+        description: "True for active, False for inactive."
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['False']
+  - name: question_3
+    description: "3) (1 PT) Which instructors are not current employees?"
+    columns:
+      - name: status
+        description: "True for active, False for inactive."
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Active']
   # - name: question_4
   #   description: "4) (1 PT) For each course (active and inactive), how many learning outcomes are there?"
   #   columns:
