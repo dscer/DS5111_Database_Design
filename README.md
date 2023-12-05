@@ -87,6 +87,8 @@ No, we would need to consider room assignment and availability which makes the d
 After building and populating your database, you will write SQL queries to answer the questions below.
 Include your SQL code and results in your submitted file.
 
+*Note to build the databases and fix some of the formatting done by excel. `src/01-raw-data-prep.ipynb` and `src/02-raw-data-prep.ipynb` were run sequentially*
+
 ### 1) (1 PT) Which courses are currently included (active) in the program? Include the course mnemonic and course name for each.
 
 [View `question_1.sql`](./sample_model/question_1.sql)
