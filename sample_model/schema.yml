@@ -1,121 +1,103 @@
+
+version: 2
+
 models:
-    # 1) (1 PT) Which courses are currently included (active) in the program? Include the course mnemonic and course name for each.
-    - name: 1_template
-    description: "nasa active site names only"
+  - name: question_1
+    description: "1) (1 PT) Which courses are currently included (active) in the program? Include the course mnemonic and course name for each."
     columns:
-      - name: status
-        description: "status, active or null, but should be Active only for this table"
+      - name: active
+        description: "True for active, False for inactive."
         tests:
           - not_null
           - accepted_values:
-              values: ['Active']
-
-    # 2) (1 PT) Which courses were included in the program, but are no longer active? Include the course mnemonic and course name for each.
-    - name: 2_template
-    description: "nasa active site names only"
-    columns:
-      - name: status
-        description: "status, active or null, but should be Active only for this table"
-        tests:
-          - not_null
-          - accepted_values:
-              values: ['Active']
-
-    # 3) (1 PT) Which instructors are not current employees?
-    - name: 3_template
-    description: "nasa active site names only"
-    columns:
-      - name: status
-        description: "status, active or null, but should be Active only for this table"
-        tests:
-          - not_null
-          - accepted_values:
-              values: ['Active']
-              
-    # 4) (1 PT) For each course (active and inactive), how many learning outcomes are there?
-    - name: 4_template
-    description: "nasa active site names only"
-    columns:
-      - name: status
-        description: "status, active or null, but should be Active only for this table"
-        tests:
-          - not_null
-          - accepted_values:
-              values: ['Active']
-
-    # 5) (2 PTS) Are there any courses with no learning outcomes? If so, provide their mnemonics and names.
-    - name: 5_template
-    description: "nasa active site names only"
-    columns:
-      - name: status
-        description: "status, active or null, but should be Active only for this table"
-        tests:
-          - not_null
-          - accepted_values:
-              values: ['Active']
-
-    # 6) (2 PTS) Which courses include SQL as a learning outcome? Include the learning outcome descriptions, course mnemonics, and course names in your solution.
-    - name: 6_template
-    description: "nasa active site names only"
-    columns:
-      - name: status
-        description: "status, active or null, but should be Active only for this table"
-        tests:
-          - not_null
-          - accepted_values:
-              values: ['Active']
-
-    # 7) (1 PT) Who taught course ds5100 in Summer 2021?
-    - name: 7_template
-    description: "nasa active site names only"
-    columns:
-      - name: status
-        description: "status, active or null, but should be Active only for this table"
-        tests:
-          - not_null
-          - accepted_values:
-              values: ['Active']
-
-    # 8) (1 PT) Which instructors taught in Fall 2021? Order their names alphabetically, making sure the names are unique.
-    - name: 8_template
-    description: "nasa active site names only"
-    columns:
-      - name: status
-        description: "status, active or null, but should be Active only for this table"
-        tests:
-          - not_null
-          - accepted_values:
-              values: ['Active']
-
-    # 9) (1 PT) How many courses did each instructor teach in each term? Order your results by term and then instructor.
-    - name: 9_template
-    description: "nasa active site names only"
-    columns:
-      - name: status
-        description: "status, active or null, but should be Active only for this table"
-        tests:
-          - not_null
-          - accepted_values:
-              values: ['Active']
-
-    # 10a) (2 PTS) Which courses had more than one instructor for the same term? Provide the mnemonic and term for each. Note this occurs in courses with multiple sections.
-    - name: 10a_template
-    description: "nasa active site names only"
-    columns:
-      - name: status
-        description: "status, active or null, but should be Active only for this table"
-        tests:
-          - not_null
-          - accepted_values:
-              values: ['Active']
-  
-    # 10b) (1 PT) For courses with multiple sections, provide the term, course mnemonic, and instructor name for each. Hint: You can use your result from 10a in a subquery or WITH clause.
-    - name: 10b_template
-    description: "nasa active site names only"
-    columns:
-      - name: status
-        description: "status, active or null, but should be Active only for this table"
-        tests:
-          - not_null
-          - accepted_values:
-              values: ['Active']
+              values: ['True']
+  # - name: 2_template
+  #   description: "2) (1 PT) Which courses were included in the program, but are no longer active? Include the course mnemonic and course name for each."
+  #   columns:
+  #     - name: status
+  #       description: ""
+  #       tests:
+  #         - not_null
+  #         - accepted_values:
+  #             values: ['Active']
+  # - name: 3_template
+  #   description: "3) (1 PT) Which instructors are not current employees?"
+  #   columns:
+  #     - name: status
+  #       description: ""
+  #       tests:
+  #         - not_null
+  #         - accepted_values:
+  #             values: ['Active']
+  # - name: 4_template
+  #   description: "4) (1 PT) For each course (active and inactive), how many learning outcomes are there?"
+  #   columns:
+  #     - name: status
+  #       description: ""
+  #       tests:
+  #         - not_null
+  #         - accepted_values:
+  #             values: ['Active']
+  # - name: 5_template
+  #   description: "5) (2 PTS) Are there any courses with no learning outcomes? If so, provide their mnemonics and names."
+  #   columns:
+  #     - name: status
+  #       description: ""
+  #       tests:
+  #         - not_null
+  #         - accepted_values:
+  #             values: ['Active']
+  # - name: 6_template
+  #   description: "6) (2 PTS) Which courses include SQL as a learning outcome? Include the learning outcome descriptions, course mnemonics, and course names in your solution."
+  #   columns:
+  #     - name: status
+  #       description: ""
+  #       tests:
+  #         - not_null
+  #         - accepted_values:
+  #             values: ['Active']
+  # - name: 7_template
+  #   description: "7) (1 PT) Who taught course ds5100 in Summer 2021?"
+  #   columns:
+  #     - name: status
+  #       description: ""
+  #       tests:
+  #         - not_null
+  #         - accepted_values:
+  #             values: ['Active']
+  # - name: 8_template
+  #   description: "8) (1 PT) Which instructors taught in Fall 2021? Order their names alphabetically, making sure the names are unique."
+  #   columns:
+  #     - name: status
+  #       description: ""
+  #       tests:
+  #         - not_null
+  #         - accepted_values:
+  #             values: ['Active']
+  # - name: 9_template
+  #   description: "9) (1 PT) How many courses did each instructor teach in each term? Order your results by term and then instructor."
+  #   columns:
+  #     - name: status
+  #       description: ""
+  #       tests:
+  #         - not_null
+  #         - accepted_values:
+  #             values: ['Active']
+  # - name: 10a_template
+  #   description: "10a) (2 PTS) Which courses had more than one instructor for the same term? Provide the mnemonic and term for each. Note this occurs in courses with multiple sections."
+  #   columns:
+  #     - name: status
+  #       description: ""
+  #       tests:
+  #         - not_null
+  #         - accepted_values:
+  #             values: ['Active']
+  # - name: 10b_template
+  #   description: "10b) (1 PT) For courses with multiple sections, provide the term, course mnemonic, and instructor name for each. Hint: You can use your result from 10a in a subquery or WITH clause."
+  #   columns:
+  #     - name: status
+  #       description: ""
+  #       tests:
+  #         - not_null
+  #         - accepted_values:
+  #             values: ['Active']

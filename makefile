@@ -25,7 +25,7 @@ run:
 
 .PHONY: run_new
 run_new:
-	cp -r sample_model/ ds5111_lab_dbt_snow/models/
+	cp -r sample_model/ ds5111_db_design_dbt_snow/models/
 	. env/bin/activate; cd ds5111_db_design_dbt_snow; \
 		dbt run 
 
@@ -38,6 +38,11 @@ build:
 test:
 	. env/bin/activate; cd ds5111_db_design_dbt_snow; \
 		dbt test
+
+.PHONY: debug 
+debug:
+	. env/bin/activate; cd ds5111_db_design_dbt_snow; \
+		dbt debug
 
 .PHONY: clean
 clean:

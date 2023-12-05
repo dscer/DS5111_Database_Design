@@ -1,7 +1,7 @@
 
 {{ config(materialized='table') }}
 
-SELECT *
-FROM nasa_facilities
-WHERE status = 'Active'
+SELECT mnemonic, name
+FROM course
+WHERE active = 'True'
 -- DO NOT USE ; in these sql files
