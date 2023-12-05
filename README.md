@@ -89,22 +89,44 @@ Include your SQL code and results in your submitted file.
 
 ### 1) (1 PT) Which courses are currently included (active) in the program? Include the course mnemonic and course name for each.
 
+[View `question_1.sql`](./sample_model/question_1.sql)
+
 ### 2) (1 PT) Which courses were included in the program, but are no longer active? Include the course mnemonic and course name for each.
+
+[View `question_2.sql`](./sample_model/question_2.sql)
 
 ### 3) (1 PT) Which instructors are not current employees?
 
+[View `question_3.sql`](./sample_model/question_3.sql)
+
 ### 4) (1 PT) For each course (active and inactive), how many learning outcomes are there?
+
+[View `question_4.sql`](./sample_model/question_4.sql)
 
 ### 5) (2 PTS) Are there any courses with no learning outcomes? If so, provide their mnemonics and names.
 
+[View `question_5.sql`](./sample_model/question_5.sql)
+
 ### 6) (2 PTS) Which courses include SQL as a learning outcome? Include the learning outcome descriptions, course mnemonics, and course names in your solution.
+
+[View `question_6.sql`](./sample_model/question_6.sql)
 
 ### 7) (1 PT) Who taught course ds5100 in Summer 2021?
 
+[View `question_7.sql`](./sample_model/question_7.sql)
+
 ### 8) (1 PT) Which instructors taught in Fall 2021? Order their names alphabetically, making sure the names are unique.
+
+[View `question_8.sql`](./sample_model/question_8.sql)
 
 ### 9) (1 PT) How many courses did each instructor teach in each term? Order your results by term and then instructor.
 
+[View `question_9.sql`](./sample_model/question_9.sql)
+
 ### 10a) (2 PTS) Which courses had more than one instructor for the same term? Provide the mnemonic and term for each. Note this occurs in courses with multiple sections.
 
+[View `question_10b.sql`](./sample_model/question_10b.sql)
+
 ### 10b) (1 PT) For courses with multiple sections, provide the term, course mnemonic, and instructor name for each. Hint: You can use your result from 10a in a subquery or WITH clause.
+
+[View `question_10a.sql`](./sample_model/question_10a.sql)
