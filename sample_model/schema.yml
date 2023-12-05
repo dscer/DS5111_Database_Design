@@ -11,7 +11,7 @@ models:
           - not_null
           - accepted_values:
               values: ['True']
-  # - name: 2_template
+  # - name: question_2
   #   description: "2) (1 PT) Which courses were included in the program, but are no longer active? Include the course mnemonic and course name for each."
   #   columns:
   #     - name: status
@@ -20,7 +20,7 @@ models:
   #         - not_null
   #         - accepted_values:
   #             values: ['Active']
-  # - name: 3_template
+  # - name: question_3
   #   description: "3) (1 PT) Which instructors are not current employees?"
   #   columns:
   #     - name: status
@@ -29,7 +29,7 @@ models:
   #         - not_null
   #         - accepted_values:
   #             values: ['Active']
-  # - name: 4_template
+  # - name: question_4
   #   description: "4) (1 PT) For each course (active and inactive), how many learning outcomes are there?"
   #   columns:
   #     - name: status
@@ -38,7 +38,7 @@ models:
   #         - not_null
   #         - accepted_values:
   #             values: ['Active']
-  # - name: 5_template
+  # - name: question_5
   #   description: "5) (2 PTS) Are there any courses with no learning outcomes? If so, provide their mnemonics and names."
   #   columns:
   #     - name: status
@@ -47,7 +47,7 @@ models:
   #         - not_null
   #         - accepted_values:
   #             values: ['Active']
-  # - name: 6_template
+  # - name: question_6
   #   description: "6) (2 PTS) Which courses include SQL as a learning outcome? Include the learning outcome descriptions, course mnemonics, and course names in your solution."
   #   columns:
   #     - name: status
@@ -56,7 +56,7 @@ models:
   #         - not_null
   #         - accepted_values:
   #             values: ['Active']
-  # - name: 7_template
+  # - name: question_7
   #   description: "7) (1 PT) Who taught course ds5100 in Summer 2021?"
   #   columns:
   #     - name: status
@@ -65,7 +65,7 @@ models:
   #         - not_null
   #         - accepted_values:
   #             values: ['Active']
-  # - name: 8_template
+  # - name: question_8
   #   description: "8) (1 PT) Which instructors taught in Fall 2021? Order their names alphabetically, making sure the names are unique."
   #   columns:
   #     - name: status
@@ -74,7 +74,7 @@ models:
   #         - not_null
   #         - accepted_values:
   #             values: ['Active']
-  # - name: 9_template
+  # - name: question_9
   #   description: "9) (1 PT) How many courses did each instructor teach in each term? Order your results by term and then instructor."
   #   columns:
   #     - name: status
@@ -83,7 +83,7 @@ models:
   #         - not_null
   #         - accepted_values:
   #             values: ['Active']
-  # - name: 10a_template
+  # - name: question_10a
   #   description: "10a) (2 PTS) Which courses had more than one instructor for the same term? Provide the mnemonic and term for each. Note this occurs in courses with multiple sections."
   #   columns:
   #     - name: status
@@ -92,7 +92,7 @@ models:
   #         - not_null
   #         - accepted_values:
   #             values: ['Active']
-  # - name: 10b_template
+  # - name: question_10b
   #   description: "10b) (1 PT) For courses with multiple sections, provide the term, course mnemonic, and instructor name for each. Hint: You can use your result from 10a in a subquery or WITH clause."
   #   columns:
   #     - name: status
