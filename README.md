@@ -68,6 +68,10 @@ For example, these actions should not be allowed:
 
 Yes,
 - Learning objectives should pertain to courses offered by the School of Data Science
+- Each instructor has their own unique identifier and has Active marked as True or False. Do not creates list of instructor names in the instructor table, so we can perform queries on classes with multiple sections.
+- Each course should have a unique mnemonic and has Active marked as True or False.
+- Learning outcomes must have a unique id, reference a mnemonic that is in the courses table, and has Active marked as True or False .
+- Each row in the teaches table should reference a unique instructor_id that is present in the instructor table, contain a valid mnemonic, and reference a term with the following format (summerYYYY, winterYYYY, fallYYYY, springYYYY). A term table could be used to help ensure terms are consistent.
 
 ### 8) (5 PTS) Draw and submit a Relational Model for your project. For an example, see Beginning Database Design Solutions page 115 Figure 5-28.
 
