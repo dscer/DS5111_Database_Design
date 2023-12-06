@@ -5,64 +5,70 @@ models:
   - name: question_1
     description: "1) (1 PT) Which courses are currently included (active) in the program? Include the course mnemonic and course name for each."
     columns:
-      - name: active
+      - name: mnemonic
         description: "True for active, False for inactive."
         tests:
           - not_null
-          - accepted_values:
-              values: ['True']
   - name: question_2
     description: "2) (1 PT) Which courses were included in the program, but are no longer active? Include the course mnemonic and course name for each."
     columns:
-      - name: status
-        description: "True for active, False for inactive."
+      - name: mnemonic
+        description: "Course identifier"
         tests:
           - not_null
           - accepted_values:
-              values: ['False']
+              values: ['ds6003', 'ds6012']
   - name: question_3
     description: "3) (1 PT) Which instructors are not current employees?"
     columns:
-      - name: status
+      - name: name
         description: "True for active, False for inactive."
         tests:
           - not_null
           - accepted_values:
-              values: ['Active']
+              values: ['Jeremy Bolton', 'Luis Felipe Rosado Murillo']
   - name: question_4
     description: "4) (1 PT) For each course (active and inactive), how many learning outcomes are there?"
     columns:
-      - name: mnemonic
+      - name: num_learning_outcomes
         description: "course identifier"
         tests:
           - not_null
   - name: question_5
     description: "5) (2 PTS) Are there any courses with no learning outcomes? If so, provide their mnemonics and names."
     columns:
-      - name: mnemonic
+      - name: course_mnemonic
         description: "course identifier"
         tests:
           - not_null
+          - accepted_values:
+              values: ['ds5012', 'sarc5400']
   - name: question_6
     description: "6) (2 PTS) Which courses include SQL as a learning outcome? Include the learning outcome descriptions, course mnemonics, and course names in your solution."
     columns:
-      - name: mnemonics
+      - name: outcome_description
         description: "course identifier"
         tests:
           - not_null
   - name: question_7
     description: "7) (1 PT) Who taught course ds5100 in Summer 2021?"
     columns:
-      - name: term
+      - name: course_term
         description: "term course was taught"
         tests:
           - not_null
           - accepted_values:
               values: ['summer2021']
+      - name: course_mnemonic
+        description: "course identifier"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['ds5100']
   - name: question_8
     description: "8) (1 PT) Which instructors taught in Fall 2021? Order their names alphabetically, making sure the names are unique."
     columns:
-      - name: name
+      - name: instructor_name
         description: "name of instructor"
         tests:
           - not_null
@@ -77,18 +83,16 @@ models:
   - name: question_10a
     description: "10a) (2 PTS) Which courses had more than one instructor for the same term? Provide the mnemonic and term for each. Note this occurs in courses with multiple sections."
     columns:
-      - name: status
-        description: ""
+      - name: term
+        description: "term of class"
         tests:
           - not_null
           - accepted_values:
-              values: ['Active']
+              values: ['summer2021', 'fall2021']
   - name: question_10b
     description: "10b) (1 PT) For courses with multiple sections, provide the term, course mnemonic, and instructor name for each. Hint: You can use your result from 10a in a subquery or WITH clause."
     columns:
-      - name: status
-        description: ""
+      - name: term
+        description: "term of class"
         tests:
           - not_null
-          - accepted_values:
-              values: ['Active']

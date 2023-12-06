@@ -14,7 +14,7 @@ You will then answer the following Design Questions and submit your responses.
 ### 2) (2 PTS) For each table, what field(s) will you use for primary key? 
 
 - Table 1: `course`s - The `_mnemonic` of the course.
-- Table 2: `instructors` - An unqiue `_instructor_id` since names can potentially be the same.
+- Table 2: `instructors` - A unique `_instructor_id` since names can potentially be the same.
 - Table 3: `learning_outcomes` - A unique `_objective_id`.
 - Table 4: `teaches` - A combination of the `instructor_id`, course `_mnemonic`, and `_term`.
 
@@ -44,7 +44,7 @@ You will then answer the following Design Questions and submit your responses.
 - 2nd order normalization:
   - The `instructor` table has `_instructor_id` as its primary key, and all non-key attributes (`name`, `active`) are functionally dependent on the `_instructor_id`, making it satisfy 2NF.
   - The `course` table has `_mnemonic` as its primary key, and all non-key attributes (`course_name`, `description_short`, `active`) are functionally dependent on the `_mnemonic`, making it satisfy 2NF.
-  - The `teaches` table has a composite primary key (`_instructor_id`, `_mnemonic`, and `_term`) and no non-key attributethat are functionally dependent on the entire primary key. Thus, it satisfies 2NF.
+  - The `teaches` table has a composite primary key (`_instructor_id`, `_mnemonic`, and `_term`) and no non-key attributes that are functionally dependent on the entire primary key. Thus, it satisfies 2NF.
   - The `learning_outcomes` table has a composite primary key (`_objective_id` and `_mnemonic`), as well as non-key attributes, including `short_description` and `active`. These non-key attributes are functionally dependent on the entire primary key, so it satisfies 2NF.
 
 - 3rd order normalization:
