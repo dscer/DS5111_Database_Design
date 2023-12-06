@@ -73,8 +73,8 @@ Yes,
 
 https://dbdiagram.io/d/ds5111_lab_database_design-65419ad07d8bbd64653c6747
 
-![](imgs/ds5111_lab_database_design-1.png)
-![](imgs/ds5111_lab_database_design-2.png)
+![](imgs/ds5111_lab_database_design-1.jpg)
+![](imgs/ds5111_lab_database_design-2.jpg)
 
 ### 9) (2 PTS) Suppose you were asked if your database could also support the UVA SDS Residential MSDS Program. Explain any issues that might arise, changes to the database structure (schema), and new data that might be needed. Note you won’t actually need to support this use case for the project.
 
