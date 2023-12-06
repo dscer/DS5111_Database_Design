@@ -36,14 +36,14 @@ You will then answer the following Design Questions and submit your responses.
 ### 5) (1 PT) Is there anything to normalize in the database, and if so, how will you normalize it? Recall the desire to eliminate redundancy.
 
 - **1st order normalization:**
-  - In the `instructors` and `courses` tables, each column contains atomic values, such as `_instructor_id`, `first_name`, `last_name`, `_mnemonic`, `course_name`, etc.
+  - In the `instructors` and `courses` tables, each column contains atomic values, such as `_instructor_id`, `name`, `_mnemonic`, `course_name`, etc.
   - The `teaches` table appears satisfies 1NF. Each column contains atomic values of consistent data types.
   - The `learning_outcomes` table satisfies 1NF. Each column contains atomic values of consistent data types.
   - All entries in each column are of the same data type, such as integers for IDs, strings for names, and so on.
 
 - 2nd order normalization:
-  - The `instructor` table has `_instructor_id` as its primary key, and all non-key attributes (`first_name`, `last_name`, `email_address`, `phone_number`, `active`) are functionally dependent on the `_instructor_id`, making it satisfy 2NF.
-  - The `course` table has `_mnemonic` as its primary key, and all non-key attributes (`course_name`, `description_short`, `creedit_hours`, `active`) are functionally dependent on the `_mnemonic`, making it satisfy 2NF.
+  - The `instructor` table has `_instructor_id` as its primary key, and all non-key attributes (`name`, `active`) are functionally dependent on the `_instructor_id`, making it satisfy 2NF.
+  - The `course` table has `_mnemonic` as its primary key, and all non-key attributes (`course_name`, `description_short`, `active`) are functionally dependent on the `_mnemonic`, making it satisfy 2NF.
   - The `teaches` table has a composite primary key (`_instructor_id`, `_mnemonic`, and `_term`) and no non-key attributethat are functionally dependent on the entire primary key. Thus, it satisfies 2NF.
   - The `learning_outcomes` table has a composite primary key (`_objective_id` and `_mnemonic`), as well as non-key attributes, including `short_description` and `active`. These non-key attributes are functionally dependent on the entire primary key, so it satisfies 2NF.
 
@@ -67,9 +67,7 @@ For example, these actions should not be allowed:
 - Assigning an invalid instructor to a course
 
 Yes,
-- Instructors should have a valid `email_address` and `phone_number`
 - Learning objectives should pertain to courses offered by the School of Data Science
-- TBD
 
 ### 8) (5 PTS) Draw and submit a Relational Model for your project. For an example, see Beginning Database Design Solutions page 115 Figure 5-28.
 
@@ -80,7 +78,7 @@ https://dbdiagram.io/d/ds5111_lab_database_design-65419ad07d8bbd64653c6747
 
 ### 9) (2 PTS) Suppose you were asked if your database could also support the UVA SDS Residential MSDS Program. Explain any issues that might arise, changes to the database structure (schema), and new data that might be needed. Note you won’t actually need to support this use case for the project.
 
-No, we would need to consider room assignment and availability which makes the database more complex since we would need to track class enrollment which in turn could require a need to have a student table and track many other factor that make availability possible. Room assignment would mean we need to determine what classes are taking place at what time of the day and where so we do not have a collison.
+No, we would need to consider room assignment and availability which makes the database more complex since we would need to track class enrollment which in turn could require a need to have a student table and track many other factor that make availability possible. Room assignment would mean we need to determine what classes are taking place at what time of the day and where so we do not have a collision.
 
 ## Part 2
 
