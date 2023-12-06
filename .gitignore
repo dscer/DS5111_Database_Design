@@ -159,5 +159,5 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-ds5111_db_design_dbt_snow/
+#ds5111_db_design_dbt_snow/
 **/*.db
