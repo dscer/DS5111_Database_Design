@@ -127,7 +127,7 @@ Include your SQL code and results in your submitted file.
 
 ### 10a) (2 PTS) Which courses had more than one instructor for the same term? Provide the mnemonic and term for each. Note this occurs in courses with multiple sections.
 
-[View `question_10b.sql`](./sample_model/question_10b.sql)
+[View `question_10a.sql`](./sample_model/question_10a.sql)
 
 ### 10b) (1 PT) For courses with multiple sections, provide the term, course mnemonic, and instructor name for each. Hint: You can use your result from 10a in a subquery or WITH clause.
 
