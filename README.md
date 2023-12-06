@@ -131,4 +131,4 @@ Include your SQL code and results in your submitted file.
 
 ### 10b) (1 PT) For courses with multiple sections, provide the term, course mnemonic, and instructor name for each. Hint: You can use your result from 10a in a subquery or WITH clause.
 
-[View `question_10a.sql`](./sample_model/question_10a.sql)
+[View `question_10b.sql`](./sample_model/question_10b.sql)
