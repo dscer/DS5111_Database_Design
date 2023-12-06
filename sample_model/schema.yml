@@ -36,26 +36,20 @@ models:
         description: "course identifier"
         tests:
           - not_null
-          # - accepted_values:
-          #     values: ['Active']
-  # - name: question_5
-  #   description: "5) (2 PTS) Are there any courses with no learning outcomes? If so, provide their mnemonics and names."
-  #   columns:
-  #     - name: status
-  #       description: ""
-  #       tests:
-  #         - not_null
-  #         - accepted_values:
-  #             values: ['Active']
-  # - name: question_6
-  #   description: "6) (2 PTS) Which courses include SQL as a learning outcome? Include the learning outcome descriptions, course mnemonics, and course names in your solution."
-  #   columns:
-  #     - name: status
-  #       description: ""
-  #       tests:
-  #         - not_null
-  #         - accepted_values:
-  #             values: ['Active']
+  - name: question_5
+    description: "5) (2 PTS) Are there any courses with no learning outcomes? If so, provide their mnemonics and names."
+    columns:
+      - name: mnemonic
+        description: "course identifier"
+        tests:
+          - not_null
+  - name: question_6
+    description: "6) (2 PTS) Which courses include SQL as a learning outcome? Include the learning outcome descriptions, course mnemonics, and course names in your solution."
+    columns:
+      - name: mnemonics
+        description: "course identifier"
+        tests:
+          - not_null
   # - name: question_7
   #   description: "7) (1 PT) Who taught course ds5100 in Summer 2021?"
   #   columns:
